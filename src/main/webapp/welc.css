@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+.firstpage {
+    position: relative;
+    height: 100vh;
+}
+
+.firstpage::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url('image/loginpage.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+    z-index: -1;
+}
+
+.upper-navigation {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navlist {
+    display: inline-flex;
+}
+
+.navlist a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.listbutton {
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.listbutton:hover {
+    cursor: pointer;
+    background: #a98838;
+}
+
+.listbutton:hover>a {
+    color: white;
+    text-decoration: none;
+}
+
+.hotellogo {
+    display: inline-flex;
+}
+
+.hotellogo img {
+    margin: 0.2rem 10rem;
+    max-width: 5rem
+}
+
+.landingpage {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.boxmain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 510px;
+    min-width: 300px;
+    padding: 0px 7px;
+}
+
+.firsthalf {
+    max-width: 68rem;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.firsthalf h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.firsthalf p {
+    text-align: center;
+    color: white;
+}
+
+.login-signup-button {
+    outline: none;
+    border: none;
+    border-radius: 500px;
+    padding: 12px 36px;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 10px;
+    background-color: #a98838;
+    color: white;
+}
+
+.login-signup-button:hover {
+    cursor: pointer;
+    background-color: #d19c1f;
+    color: black;
+}
+
+.boxsub {
+    display: grid;
+    grid-template-areas: 'checkin checkout' 'rooms rooms' 'adults kids' 'search search';
+    row-gap: 15px;
+    column-gap: 17px;
+    padding: 15px;
+    margin: 0px 5px;
+    background-color: rgb(95, 95, 95);
+    box-shadow: 1px 1px 3px rgb(138, 138, 138);
+}
+
+.boxsub-label {
+    font-size: 14px;
+    display: block;
+    word-spacing: 3px;
+    margin-bottom: 2px;
+    color: white;
+}
+
+.boxsub div input {
+    width: 100%;
+    padding: 7px 7px;
+    outline: none;
+}
+
+.search>input {
+    background: #a98838;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.search>input:hover {
+    background: #d19c1f;
+}
+
+#checkin {
+    grid-area: checkin;
+}
+
+#checkout {
+    grid-area: checkout;
+}
+
+#rooms {
+    grid-area: rooms;
+}
+
+#adults {
+    grid-area: adults;
+}
+
+#kids {
+    grid-area: kids;
+}
+
+#search {
+    grid-area: search;
+}
+
+.burger {
+    display: none;
+    position: absolute;
+    right: 15%;
+    top: 1rem;
+    cursor: pointer;
+}
+
+.line {
+    height: 4px;
+    width: 33px;
+    background-color: white;
+    margin: 4px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* changes */
+
+.burger.open .main {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.burger.open .upper {
+    transform: rotate(45deg) translate(22px, -10px);
+}
+
+.burger.open .lower {
+    transform: rotate(-45deg) translate(22px, 10px);
+}
+
+/* changes end */
+
+/* footer */
+
+.footer p {
+    display: inline-block;
+}
+
+.footer p:hover {
+    color: #A98838;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #232323;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+}
+
+.footerlogo img {
+    max-width: 5.7rem;
+    cursor: pointer;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos {
+    display: flex;
+}
+
+.iconf {
+    height: 24px;
+    margin: 0px 23px;
+    min-width: 24px;
+    cursor: pointer
+}
+
+/* end of footer */
+
+@media only screen and (max-width:930px) {
+    .firstpage {
+        height: 100%;
+        min-height: 100vh;
+    }
+    .upper-navigation {
+        min-height: 15vh;
+    }
+    .v-list {
+        opacity: 0;
+        display: none;
+    }
+    .navbar {
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        width: 250px;
+        right: 0;
+        top: 0px;
+        background-color: black;
+        transition: all 0.5s ease-in-out;
+        /* changes */
+        animation-name: sliding;
+        animation-duration: 0.5s;
+        /* changes end */
+    }
+    /* changes */
+    @keyframes sliding {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 250px;
+        }
+    }
+    /* changes end */
+    .navlist {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 8px;
+        margin-top: 0px;
+        top: 57px;
+        visibility: visible;
+    }
+    .navlist-visible {
+        visibility: hidden;
+    }
+    .navlist li a {
+        color: #818181;
+        transition: 0.3s;
+    }
+    .listbutton:hover>a {
+        color: white;
+    }
+    .listbutton {
+        padding: 18px 8px;
+    }
+    .listbutton.active {
+        background: none;
+    }
+    .listbutton:hover {
+        cursor: pointer;
+        background: none;
+    }
+    .hotellogo img {
+        position: absolute;
+        left: -35px;
+        top: 3px;
+        z-index: 2;
+    }
+    .landingpage {
+        flex-direction: column;
+    }
+    .boxmain {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 20px 0px 35px;
+    }
+    .boxsub {
+        margin: 0px;
+        margin-bottom: 18px;
+    }
+    
+    .burger {
+        display: block;
+        z-index: 2;
+        position: absolute;
+    }
+    .burger.on-off {
+        position: fixed;
+    }
+}

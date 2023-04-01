@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>College_Library</display-name>
+	<welcome-file-list>
+		<welcome-file>welcome.jsp</welcome-file>
+	</welcome-file-list>
+	<filter>
+		<display-name>StudentFilter</display-name>
+		<filter-name>StudentFilter</filter-name>
+		<filter-class>com.ineuron.filters.StudentFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>StudentFilter</filter-name>
+		<url-pattern>/student</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<description></description>
+		<display-name>StudentServlet</display-name>
+		<servlet-name>StudentServlet</servlet-name>
+		<servlet-class>com.ineuron.controllers.StudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StudentServlet</servlet-name>
+		<url-pattern>/student/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>MainController</display-name>
+		<servlet-name>MainController</servlet-name>
+		<servlet-class>com.ineuron.controllers.MainController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MainController</servlet-name>
+		<url-pattern>/main/*</url-pattern>
+	</servlet-mapping>
+</web-app>

@@ -1,0 +1,73 @@
+/* TODO : Service Container Css */
+.hrlineone {
+    display: block;
+    margin: auto;
+    width: 115px;
+    padding: 1px 0px;
+    background-color: #a98838;
+    border: none;
+}
+
+.servicesContainer {
+    padding: 35px 0px;
+    background-color: whitesmoke;
+}
+
+.servicesContainer h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.servicebox {
+    display: flex;
+    justify-content: space-around;
+}
+
+.serviceboximg {
+    margin: 4px;
+    background-color: white;
+    display: flex;
+    background: white;
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+}
+
+.serviceboximg img {
+    height: 40px;
+    display: block;
+    margin: auto;
+}
+
+.boxcontent h2 {
+    font-size: 18px;
+    color: #a45d04;
+}
+
+.boxcontent p {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.boxcontent h2, .boxcontent p {
+    text-align: center;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.boxcontent {
+    margin: 5px 10px;
+    padding: 5px 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width:700px) {
+    .servicebox {
+        display: flex;
+        flex-direction: column;
+    }
+}

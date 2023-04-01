@@ -1,0 +1,88 @@
+.modal.active {
+    display: block;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.login-modal, .signin-modal {
+    max-width: 400px;
+    background: whitesmoke;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.login-modal h1, .signin-modal h1 {
+    text-align: center;
+    font-family: 'Baloo Bhaina 2';
+    color: #a98838;
+    font-size: 42px;
+}
+
+.login-modal span, .signin-modal span {
+    position: absolute;
+    right: -33px;
+    top: -8%;
+    font-size: 26px;
+    background: #ffdee6;
+    border-radius: 50%;
+    padding: 28px 39px;
+    color: black;
+    cursor: pointer;
+}
+
+.login-form, .signin-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+}
+
+.modallabel {
+    font-size: 14px;
+}
+
+.login-form input, .signin-form input {
+    width: 98%;
+    margin-left: auto;
+    outline: none;
+    border: none;
+    background: whitesmoke;
+    padding: 5px;
+    border-bottom: 2px solid #a98838;
+    margin-bottom: 38px;
+}
+
+.login-form input[type="submit"], .signin-form input[type="submit"] {
+    width: 100%;
+    border: none;
+    background: #a98838;
+    color: white;
+    letter-spacing: 1px;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover, .signin-form input[type="submit"]:hover {
+    background: #d19c1f;
+}
+
+@media only screen and (max-width:410px) {
+    .login-modal, .signin-modal {
+        max-width: 350px;
+    }
+}
